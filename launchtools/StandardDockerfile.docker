@@ -18,7 +18,7 @@ RUN chown -R $UID:$UID ./SwarmUI
 RUN git config --global --add safe.directory '*'
 
 # Ensure a user exists within docker for the given uid
-RUN useradd -u $UID swarmui
+# RUN useradd -u $UID swarmui
 
 # If built binaries were copied in, discard them, they are likely bad.
 # Build inside the container later (so eg extensions are included properly).
